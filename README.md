@@ -25,7 +25,7 @@ Existing project docs are kept, because you are meant to edit them per project.
 | `grilling`        | Stress-tests a plan, decision or idea                                                     |
 | `interview`       | Sharpens a plan through an interview and writes ADRs and glossary entries along the way   |
 | `to-spec`         | Turns the conversation into a spec in the issue tracker                                   |
-| `to-tickets`      | Breaks a spec into tracer-bullet tickets with blocking edges                              |
+| `to-ticket`       | Breaks a spec into tracer-bullet tickets with blocking edges                              |
 | `orchestrate`     | Implements specs and tickets in code                                                      |
 | `tdd`             | Test-driven development, red-green-refactor                                               |
 | `pr`              | Creates pull requests and writes their descriptions                                       |
@@ -39,3 +39,7 @@ Existing project docs are kept, because you are meant to edit them per project.
 - `issue-tracker.md`: where issues live (local markdown under `.scratch/` by default)
 - `triage-labels.md`: the triage label vocabulary
 - `domain.md`: where the glossary and ADRs live
+
+## Credits
+
+Most skills here are derived from [mattpocock/skills](https://github.com/mattpocock/skills) by Matt Pocock (MIT). See [`CREDITS.md`](CREDITS.md).

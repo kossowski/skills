@@ -5,6 +5,8 @@ description: "Use when creating a pull request or writing/updating a PR descript
 
 Build the PR body from the actual change, not from memory of the conversation. Read `git diff <base>...HEAD` and `git log <base>..HEAD` first.
 
+Before you write the first section, call the Skill tool with `technical-writing` and with `unslop-writing`, and write every sentence of the body to both.
+
 Use this template for writing the PR body:
 
 ```markdown
@@ -16,11 +18,23 @@ Use this template for writing the PR body:
 
 Closes #<issue>
 
+## Parts
+
+<optional: one line per commit of a PR built in parts, in order, with a link to the commit>
+
+## Open
+
+<optional: one line per finding left open, with the ticket that holds it>
+
 ## Evidence
 
 | Before | After |
 |---|---|
 | <screenshot/output/failing test run> | <screenshot/output/passing test run> |
+
+## Try it
+
+<the commands the user runs and the output they produce>
 
 ## Merge Danger
 
@@ -157,6 +171,10 @@ Place each visual next to the short text it supports. Keep only the calls, files
 
 You may use one of these, you may use several, it is unlikely you will use all of them. Use your judgement and don't overwhelm the reviewer.
 
+### Parts and Open
+
+Only for a PR that is built in parts, such as a ticket lead's PR. Parts lists each commit in branch order with its title and a link: the parts, then the fix commits that follow them. Open lists each finding the PR leaves open, one line each, and names the ticket that holds it once one does. Drop both sections otherwise.
+
 ### Evidence
 
 Concrete evidence that the change works. Show a before and after.
@@ -166,6 +184,10 @@ Screenshots are S-tier - when the environment is set up for it and the change is
 Execution-based evidence is A-tier. Test results, console output. Name the test that failed before and passes after, and show its key assertion. Use pseudocode if the real test is noisy.
 
 When there is no meaningful before and after (docs-only, pure refactor, config), drop the table and state that plainly with what you did run, e.g. "Refactor, no behaviour change; existing suite passes (`npm test`)". Never invent evidence.
+
+### Try it
+
+The exact commands for the try-it steps of the ticket's Try it section, each with the output it produced. Start from the "Run it" section of `README.md`. Mark a step you did not run as "not run: needs <secret or setup>". For a ticket whose Try it section says "Nothing new", show the earlier steps it names. Drop this section when the ticket has no Try it section.
 
 ### Merge Danger
 
